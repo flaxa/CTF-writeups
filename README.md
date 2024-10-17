@@ -1,4 +1,4 @@
-# <img style="vertical-align:middle" src="Assets/flaxa_zoom.png" width="30"  alt=""/> CTF Writeups <img style="vertical-align:middle" src="Assets/flaxa_zoom.png" width="30"  alt=""/>
+# <img style="vertical-align:middle" src="Assets/flaxa_zoom.png" width="30"  alt=""/> CTF Writeups
 
 
 This repository contains the CTF challenges I have completed along with detailed write-ups. The structure is as follows: 
@@ -10,7 +10,8 @@ This repository contains the CTF challenges I have completed along with detailed
 ## Categories
 
 
-| Category | Link                |
-| -------- | ------------------- |
-| Reverse  | [Link](/Reverse/)|
+| Category  | Link                |
+| --------- | ------------------- |
+| Reverse   | [Link](/Reverse/)   |
+| Forensics | [Link](/Forensics/) |
 

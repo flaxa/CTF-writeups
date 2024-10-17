@@ -1,4 +1,4 @@
-# TCP1P 2024 - Imperfect Guesser
+# <img style="vertical-align:middle" src="/Assets/flaxa_zoom.png" width="30"  alt=""/> TCP1P 2024 - Imperfect Guesser 
 
 - CTF: TCP1P 2024
 - Challenge Name: Imperfect Guesser
@@ -237,7 +237,7 @@ last_char = "}"              # Known suffix
 # Construct the initial flag candidate
 known_chars = [ord(c) for c in first_six_chars]
 middle_length = 17  # Total length is 24; 6 + middle + 1 = 24, so 17 middle characters
-middle_chars = np.random.randint(32, 127, size=(middle_length)).tolist()  # Random initial middle characters
+middle_chars = np.random.randint(32, 128, size=(middle_length)).tolist()  # Random initial middle characters
 known_chars += middle_chars + [ord(last_char)]
 
 # Create an input tensor with the known characters
@@ -288,4 +288,5 @@ optimised_flag = "".join(chr(int(round(c))) for c in input_tensor.detach().numpy
 print(f"Optimised Flag Candidate: {optimised_flag}")
 ```
 
+---
 ### [Home](/)
