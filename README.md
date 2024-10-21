@@ -10,8 +10,9 @@ This repository contains the CTF challenges I have completed along with detailed
 ## Categories
 
 
-| Category  | Link                |
-| --------- | ------------------- |
-| Reverse   | [Link](/Reverse/)   |
-| Forensics | [Link](/Forensics/) |
+| Category     | Link                  |
+| ------------ | --------------------- |
+| Reverse      | [Link](/Reverse/)     |
+| Forensics    | [Link](/Forensics/)   |
+| Cryptography | [Link](Cryptography/) |
 

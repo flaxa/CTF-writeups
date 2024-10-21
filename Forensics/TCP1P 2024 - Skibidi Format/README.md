@@ -8,7 +8,7 @@
 
 ## Synopsis
 
-TODO
+The solution involves reading a `.skibidi` file, extracting the header metadata, decrypting the compressed pixel data using AES-256-GCM, and decompressing it with Zstandard. The pixel data is then reconstructed into an image using the `PIL` library, based on the specified number of colour channels. 
 
 ## Description
 
@@ -50,7 +50,7 @@ To solve this problem, we need to:
 3. Decompress the decrypted data using the specified compression method. 
 4. Reconstruct the image using the decompressed pixel data.
 
-### 1. Importing Required Libraries 
+### Step 1. Importing Required Libraries 
 
 The necessary libraries are imported, including `struct` for reading binary data, `Cryptodome.Cipher` for AES decryption, `zstandard` for decompression, and `PIL` and `numpy` for image manipulation. 
 
@@ -62,7 +62,7 @@ from PIL import Image
 import numpy as np
 ```
 
-### 2. Reading the `.skibidi` File
+### Step 2. Reading the `.skibidi` File
 
 The `read_skibidi_file` function takes the file path of a `.skibidi` file, opens it in binary mode, and reads the header to extract metadata such as image dimensions, colour channels, compression method, and encryption details.
 
@@ -96,7 +96,7 @@ Width 3840 - height 2160 - channels  4 - compression 1
 
 These values will be useful in the future when it comes to converting the data into an image, the compression method is also using Zstandard which is the only method supported based on the specification.
 
-### 3. Decrypting the Pixel Data
+### Step 3. Decrypting the Pixel Data
 
 Using the AES-256-GCM algorithm, the encrypted pixel data is decrypted with the extracted key and IV from the header. This step ensures data confidentiality and integrity.
 
@@ -109,7 +109,7 @@ Using the AES-256-GCM algorithm, the encrypted pixel data is decrypted with the 
 
 ```
 
-### 4. Decompressing the Data
+### Step 4. Decompressing the Data
 
 The decompressed pixel data is obtained using the Zstandard library, based on the specified compression method in the header. Error handling ensures that decompression issues are reported.
 
@@ -130,7 +130,7 @@ The decompressed pixel data is obtained using the Zstandard library, based on th
         return width, height, channels, compression_id, pixel_data
 ```
 
-### 5. Reconstructing the Image
+### Step 5. Reconstructing the Image
 
 The image is reconstructed from the decompressed pixel data. Since the number of channels is 4, the pixel data is reshaped accordingly. The `PIL` library is used to convert the array into an image and save or display it.
 
